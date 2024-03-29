@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Great+Vibes&family=Indie+Flower&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Burned&display=swap');
+
+:root{
+    --dark : #222;
+    --fredericka_the_Great : "Fredericka the Great", serif;
+    --great_vibes : "Great Vibes", cursive;
+    --raleway : "Raleway", sans-serif;
+    --indie_flower :"Indie Flower", cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-image: linear-gradient(to right bottom,#50ffc6,#ff00cb);
+    color: white;
+}
+
+
+
+
+
+/* **************************************************************** */
+.site-header{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+
+}
+.nav{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.nav .logo{
+    width: 200px;
+    height: 60px;
+    margin-left: 50px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    animation: logo-animation 4.5s linear infinite alternate;
+    box-shadow: 0 0px 20px rgba(36, 39, 37, 0.3);
+    
+}
+.nav .logo span{
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: var(--indie_flower);
+    letter-spacing: 2px;
+    text-decoration: underline black;
+    text-underline-offset: 10px;
+    /* margin-left: 10px; */
+    
+}
+
+
+.logo img{
+    width: 60px;
+    height: 100%;
+}
+
+.site-header .nav .menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 70px;
+}
+.site-header .nav .menu ul li{
+    display: inline-block;
+    margin: 0 25px;
+    height: 100px;
+    position: relative;
+    line-height: 100px;
+    font-size: 18px;
+    
+}
+
+.site-header .nav .menu ul li a{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: var(--raleway);
+    color: white;
+}
+
+
+#signup-btn{
+    height: 40px;
+    padding: 7px;
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+    margin-left: 20px;
+    transition: 0.3s;
+    box-shadow: 0px 3px 2px #dadada, 0px 0px 2px #ffffff;
+    align-items: center;
+    
+}
+.icon-hash{
+    display: none;
+}
+
+
+/* ------------------------------ home ----------------------------- */
+
+.content{
+    height: 100vh;
+    padding-top: 100px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.content .home-img{
+    width: 550px;
+    height: 400px;
+    background-image: url(../images/index-img.png);
+    animation: shoe-animation 3.5s infinite;
+    overflow: hidden;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(24deg);
+    margin-left: 50%;
+    margin-top: -70px;
+    
+
+}
+
+
+@keyframes shoe-animation{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(25px); 
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+@keyframes logo-animation {
+    0% {
+        border-radius: 48% 52% 57% 43% / 34% 44% 56% 66%;
+    }
+    25% {
+        border-radius: 62% 38% 64% 36% / 34% 55% 45% 66%;
+    }
+    50% {
+        border-radius: 43% 57% 51% 49% / 33% 42% 58% 67%;
+    }
+    100% {
+        border-radius: 40% 60% 43% 57% / 52% 32% 68% 48%;
+    }
+}
+
+
+.content .title{
+    position: absolute;
+    top: 12rem;
+    left: 40%;
+    transform: translateX(-50%);
+}
+
+.content .title h1{
+    font-size: 3rem;
+    font-weight: 600;
+    color: white;
+}
+
+.content .title p{
+    text-align: right;
+}
+
+.content .home-p{
+    position: absolute;
+    transform: rotate(-90deg);
+
+}
+
+.content .home-p p{
+    font-size: 1.5rem;
+    font-weight: 600px;
+    line-height: 1.5rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:650px){
+    .site-header .nav .menu{
+        margin-right: 15px;
+    }
+    .site-header .nav .menu ul li{
+        margin: 0 15px;
+        font-size: 14px;
+        
+    }
+
+    .content .title h1{
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: white;
+    }
+    
+}
+
+@media(max-width:550px){
+
+
+    .content .title h1{
+        font-size: 2rem;
+        font-weight: 600;
+        color: white;
+    }
+}
+
+@media(max-width:550px){
+    .icon-div{
+        position: absolute;
+        padding: 5px;
+        right: 30px;
+        border: 2px solid rgb(158, 157, 157);
+        border-radius: 5px;
+        box-shadow: 0px 3px 2px #dadada, 0px 0px 2px #ffffff;
+    }
+    .icon-hash{
+       
+        display: inline-block;
+        color: white;
+        
+        
+    }
+    .icon-hash i{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    #signup-btn{
+        display: none;
+    }
+}
+
+
+
+
+
+

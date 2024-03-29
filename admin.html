@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+</head>
+<body>
+    <header class="site-header">
+       
+        <div class="nav">
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+                <span>AH.SHOSE</span>
+            </div>
+            <div class="icon-div">
+                <a href="register.html" class="icon-hash"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            </div>
+           <div class="menu">
+            <ul>
+                <li><a href="register.html" id="signup-btn" >Sign Out</a></li>
+            </ul>
+           </div>
+
+        </div>
+    
+    </header>
+
+    <section class="admin-products">
+        <div class="admin-container">
+           <div class="products">
+            <div class="product-img">
+                <div class="img">
+                  <i class="uil uil-cloud-upload icon"></i>
+                  <h3>Upload Image</h3>
+                </div>
+  
+              <label class="select-btn" for="input-upload-img">Select Image</label>
+              <input type="file" id="input-upload-img" accept="image/jpeg, image/png , image/jpg">
+              <progress id="upload-progress" value="0" max="100"></progress>
+          </div>
+  
+          <div class="items">
+              <div class="item-field">
+                  <input type="text" placeholder="Enter The Product Name" id="product-name">
+              </div>
+              <div class="item-field">
+                  <input type="text" placeholder="Enter The Product Price" id="product-price">
+              </div>
+          </div>
+           </div>
+
+           <div class="data-btn">
+            <button id="reset">Reset</button>
+            <button id="save-data">Save Data</button>
+           </div>
+
+    </div>
+    </section>
+
+
+
+
+
+
+    <!-- js -->
+
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/admin.js"></script>
+
+
+</body>
+</html>
