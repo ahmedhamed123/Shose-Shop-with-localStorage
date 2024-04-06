@@ -12,25 +12,24 @@ document.addEventListener("DOMContentLoaded", function(){
         
 
         //------------
-        let productDiv = document.createElement("div");
-        productDiv.classList.add("product-item");
+        let productDiv = document.createElement("div")
+        productDiv.classList.add("product-item")
 
-        let productImage = document.createElement("img");
-        productImage.src = product.image;
-        productImage.alt = "img....";
+        let productImage = document.createElement("img")
+        productImage.src = product.imageUrl
+        productImage.alt = "img...."
 
-        let titleElement = document.createElement("h3");
-        titleElement.textContent = product.name;
+        let titleElement = document.createElement("h3")
+        titleElement.textContent = product.title;
 
-        let priceElement = document.createElement("p");
-        priceElement.textContent = "Price: $" + product.price;
+        let priceElement = document.createElement("p")
+        priceElement.textContent = "Price: $" + product.price
 
-        let deleteItem= document.createElement("button");
-        deleteItem.textContent = "Delete Item";
-        deleteItem.classList.add("buy-now-btn");
+        let deleteItem= document.createElement("button")
+        deleteItem.textContent = "Delete Item"
+        deleteItem.classList.add("buy-now-btn")
 
         deleteItem.addEventListener("click", function() {
-            deleteFromCart(product);
 
             let cartItems = JSON.parse(localStorage.getItem("cartList")) || [];
 
@@ -44,26 +43,22 @@ document.addEventListener("DOMContentLoaded", function(){
                 // Update the cart list in local storage with the modified array
                 localStorage.setItem("cartList", JSON.stringify(cartItems));
         
-                // Optionally, you can update the UI to reflect the changes in the cart
-                // For example, you can remove the corresponding product element from the DOM
-                // and update the badge count or refresh the cart display
+
                 productsContainer.removeChild(productDiv);
             
             }
         });
 
-        productDiv.appendChild(productImage);
-        productDiv.appendChild(titleElement);
-        productDiv.appendChild(priceElement);
-        productDiv.appendChild(deleteItem);
+        productDiv.appendChild(productImage)
+        productDiv.appendChild(titleElement)
+        productDiv.appendChild(priceElement)
+        productDiv.appendChild(deleteItem)
 
-        productsContainer.appendChild(productDiv);
+        productsContainer.appendChild(productDiv)
     });
 
 
-    function deleteFromCart(product) {
-      
-    }
+   
 
 
 
@@ -75,10 +70,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
 function signOut() {
 
-    localStorage.removeItem("userEmail");
-    localStorage.removeItem("userName");
+    localStorage.removeItem("userEmail")
+    localStorage.removeItem("userName")
     
-    window.location = "register.html"; 
+    window.location = "register.html"
 }
-let signOutBtn = document.getElementById("signup-btn");
-signOutBtn.addEventListener("click", signOut);
+let signOutBtn = document.getElementById("signup-btn")
+signOutBtn.addEventListener("click", signOut)
